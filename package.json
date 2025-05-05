@@ -1,0 +1,23 @@
+{
+  "name": "react-scrimba-playground",
+  "version": "1.0.0",
+  "description": "react-scrimba-playground",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katherinemorgan-ut/react-scrimba-playground.git"
+  },
+  "author": "Kitty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katherinemorgan-ut/react-scrimba-playground/issues"
+  },
+  "homepage": "https://github.com/katherinemorgan-ut/react-scrimba-playground#readme",
+  "dependencies": {
+    "react": "^19.1.0"
+  }
+}
