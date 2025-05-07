@@ -1,42 +1,70 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: rgb(101, 202, 249);
+  top:0%;
+  height: 100%;
+  width: 600px;
+
+}
+
+main {
+  background-color: rgb(51, 49, 56);
+  background-image: url('/assets/react.svg');
+  filter: grayscale(100%);
+  background-position: 210%;
+  background-repeat:no-repeat;
+  margin: 0;
+  padding: 2rem;
+  height: 20rem;
+  color: white;
 }
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.headerText {
+  padding: 0rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: left;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.react-facts {
+  text-align: left;
+  padding: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+.react-facts li {
+  padding: 0.25rem;
 }
 
-.read-the-docs {
-  color: #888;
+.react-facts li::marker {
+  color: rgb(101, 202, 249);
+  size: 1rem;
 }

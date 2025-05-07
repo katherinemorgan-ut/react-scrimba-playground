@@ -1,6 +1,12 @@
+
 function Navbar() {
     return (
-        <h1>Navbar goes here</h1>
+        <header>
+            <nav>
+                <img src="/assets/react.svg" width="50px" className="logo"/>
+                <p className="headerText"> React Facts </p>
+            </nav>
+        </header>
     )
 }
 
