@@ -1,25 +1,25 @@
-function ContactCard(props) {
+function ContactCard({img, name, phone, email}) {
 
     return (  
           <article className="contact-card">
               <img 
-                  src={props.img}
+                  src={img}
                   alt="Photo of Mr. Whiskerson"
               />
-              <h3>{props.name}</h3>
+              <h3>{name}</h3>
               <div className="info-group">
                   <img 
                       src="/assets/phone-icon.png" 
                       alt="phone icon" 
                   />
-                  <p>{props.phone}</p>
+                  <p>{phone}</p>
               </div>
               <div className="info-group">
                   <img 
                       src="/assets/mail-icon.png" 
                       alt="mail icon"
                   />
-                  <p>{props.email}</p>
+                  <p>{email}</p>
               </div>
           </article>
     )
