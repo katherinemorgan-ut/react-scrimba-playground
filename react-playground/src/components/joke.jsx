@@ -4,6 +4,8 @@ function Joke({setup, joke }) {
       <h2>{setup}</h2>
 
       <p>{joke}</p>
+
+      <hr />
     </>
   );
 }
