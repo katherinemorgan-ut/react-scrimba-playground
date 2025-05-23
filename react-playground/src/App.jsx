@@ -1,22 +1,13 @@
-import Joke from "./components/Joke";
-import jokesData from "./jokesData";
+import Header from "./components/Header.jsx"
+import Main from "./components/Main.jsx"
 
 function App() {
 
-  const jokeElements = jokesData.map( joke => {
-    return <Joke 
-      setup= {joke.setup}
-      joke= {joke.punchline}
-
-    />
-  })
-
-  console.log(jokeElements)
-
   return (
-    <main>
-      { jokeElements }
-    </main>
+    <>
+    < Header />
+    < Main />
+    </>
   );
 }
 
