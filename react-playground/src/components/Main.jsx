@@ -1,16 +1,13 @@
 import React from "react"
 
+import ClaudeRecipe from "./ClaudeRecipe"
+import IngredientsMap from "./IngredientsList"
+import { getRecipeFromChefClaude } from "../ai"
+
 function Main() {
 
 
-    const [ingredients, setIngredients] = React.useState([])
-
-
-    const ingredientsMap = ingredients.map(ingredient => {
-        return (
-            <li>{ingredient}</li>
-        )
-    })
+    const [ingredients, setIngredients] = React.useState( [])
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
@@ -19,24 +16,36 @@ function Main() {
         }
     }
 
+    let [ recipe, setClaudeRecipe ] = React.useState("")
+
+    // Use the onClick fxn to set both State variables 
+    async function getRecipe(){
+
+            const recipeMarkdown = await getRecipeFromChefClaude(ingredients);
+            
+            setClaudeRecipe(recipeMarkdown);
+
+    }
+    
+    
+
     return (
+        <>
         <main>
             <form action={addIngredient} className="add-ingredient-form">
-                <input aria-label="Add Ingredient"
-                 placeholder="Oregano"
-                    type="text" 
-                    name="ingredient"/>
-                    
-                <button>Add Ingredient</button>
-
+                <input
+                    type="text"
+                    placeholder="e.g. oregano"
+                    aria-label="Add ingredient"
+                    name="ingredient" />
+                <button>Add ingredient</button>
             </form>
-
-            <ul>
-                {ingredientsMap }
-            </ul>
-
-
+            {ingredients.length !== 0 && <section>
+                <IngredientsMap userIngredients={ingredients} getRecipe={getRecipe} />
+            </section>}
         </main>
+        {recipe && <ClaudeRecipe recipe={recipe}/>}
+        </>
     )
 }
 
